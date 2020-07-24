@@ -1,7 +1,6 @@
 import sbt.Keys.name
 
 lazy val mainConfig: Seq[Setting[_]] = Seq(
-  conflictManager := ConflictManager.latestCompatible,
   version := "0.0.1",
   organization := "com.github.andriimartynov",
   scalaVersion := "2.12.11",

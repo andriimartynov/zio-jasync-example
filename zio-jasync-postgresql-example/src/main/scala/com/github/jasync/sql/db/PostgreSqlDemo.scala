@@ -42,7 +42,7 @@ object PostgreSqlDemo extends App {
     logger.info(s"${queryResult.rows.head.string(0)}")
   }
 
-  def run(args: List[String]): ZIO[ZEnv, Nothing, Int] =
-    myRequest.provideLayer(layer).fold(_ => 1, _ => 0)
+  def run(args: List[String]): ZIO[ZEnv, Nothing, ExitCode] =
+    myRequest.provideLayer(layer).exitCode
 
 }
